@@ -1,0 +1,22 @@
+ C Program to find sum of elements of array:
+
+#include<stdio.h>
+int main()
+{
+   int a[] = {10,20,30,40,50};
+   int sum;
+   sum = sum_array_elements(a,4);
+   printf("\nSum of array elements is:%d",sum);
+   return 0;
+}
+int sum_array_elements( int arr[], int n ) {
+   if (n < 0) 
+   {
+     return 0;
+   }
+   else
+   { /*Recursion*/
+   
+     return arr[n] + sum_array_elements(arr, n-1);
+    }
+}
